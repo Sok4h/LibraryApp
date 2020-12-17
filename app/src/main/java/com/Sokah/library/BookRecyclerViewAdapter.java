@@ -1,6 +1,7 @@
 package com.Sokah.library;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -55,7 +56,9 @@ public class BookRecyclerViewAdapter extends RecyclerView.Adapter<BookRecyclerVi
         holder.parent.setOnClickListener(
                 (v)->{
 
-                    Toast.makeText(mContext,booksArray.get(position).getName(), Toast.LENGTH_SHORT).show();
+
+                    Intent intent = new Intent(mContext,BookActivity.class);
+                    mContext.startActivity(intent);
 
                 }
         );
